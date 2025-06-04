@@ -1,0 +1,15 @@
+fastapi
+uvicorn[standard]             # ASGI server
+sqlalchemy
+pymysql                       # Optional MySQL connector
+mysql-connector-python        # Used by SQLAlchemy if configured
+pydantic<2.0                  # FastAPI compatibility (latest <2)
+fastapi-jwt-auth              # JWT auth
+chromadb                     # Vector DB for retrieval
+python-multipart              # File upload support
+python-dotenv                 # Load environment variables
+passlib[bcrypt]               # Password hashing
+alembic                       # DB migrations
+pydantic[email]               # Email field validation
+requests                      # For external API like Groq/OpenAI
+openai                        # Only if using OpenAI API
