@@ -55,7 +55,7 @@ def custom_openapi():
         return app.openapi_schema
 
     openapi_schema = get_openapi(
-        title="Multi-User Chatbot",
+        title="AskVerse_the_Chatbot ",
         version="1.0.0",
         description="Chatbot powered by FastAPI, JWT, and Groq LLaMA3",
         routes=app.routes,

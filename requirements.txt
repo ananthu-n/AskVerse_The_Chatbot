@@ -13,3 +13,4 @@ alembic                       # DB migrations
 pydantic[email]               # Email field validation
 requests                      # For external API like Groq/OpenAI
 openai                        # Only if using OpenAI API
+cryptography

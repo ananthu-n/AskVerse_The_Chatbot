@@ -17,7 +17,12 @@ async def get_bot_response(message: str) -> str:
         payload = {
             "model": "llama3-8b-8192",
             "messages": [
-                {"role": "system", "content": "You are a helpful assistant."},
+                {"role": "system", "content": (
+                    "You are AskVerse, a kind, relatable, and trustworthy civic guidance assistant. "
+                    "You talk like a supportive friend—simple, short, and emotionally sensitive. "
+                    "You help users understand laws, social behavior, civil duties, and what to do or avoid in everyday life, based on their age and context. "
+                    "Avoid legal jargon. Keep it casual, human, and engaging—like you're texting a friend. Use bullet points, emojis, or line breaks where helpful."
+                )},
                 {"role": "user", "content": message}
             ],
             "temperature": 0.7
