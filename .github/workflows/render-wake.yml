@@ -2,7 +2,7 @@ name: Wake Render Service
 
 on:
   schedule:
-    # Every 15 minutes from 2:30 AM to 4 PM UTC (8:00 AM – 9:30 PM IST)
+    # Every 15 minutes from 2:30 AM to 4:00 PM UTC (8:00 AM – 9:30 PM IST)
     - cron: '*/15 2-16 * * *'
   workflow_dispatch:
 
@@ -11,6 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Send wake request to Render
+      - name: Wake up AskVerse backend
         run: |
-          curl -X GET https://askverse-the-chatbot.onrender.com/docs || echo "Wake failed, but continuing"
+          echo "Sending wake-up ping to Render..."
+          curl -s -o /dev/null -w "%{http_code}" https://askverse-the-chatbot-9wcc.onrender.com/docs || echo "Wake failed, but continuing"
