@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AskVerse Chat</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    #messages {
+      height: 400px;
+      overflow-y: auto;
+      border: 1px solid #333;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      background-color: #111;
+      border-radius: 10px;
+    }
+
+    .msg-user {
+      text-align: right;
+      color: #00ffff;
+      margin-bottom: 10px;
+    }
+
+    .msg-bot {
+      text-align: left;
+      color: #ffffff;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>AskVerse Chat 🤖</h2>
+    <div id="messages"></div>
+    <input type="text" id="prompt" placeholder="Type your question..." onkeydown="if(event.key==='Enter'){sendMessage();}" />
+    <button onclick="sendMessage()">Send</button>
+    <button onclick="logout()" style="margin-top: 1rem; background-color: #ff0055; color: white;">Logout</button>
+  </div>
+
+  <script src="js/chat.js"></script>
+</body>
+</html>
